@@ -80,7 +80,7 @@ const SignInContainer = () => {
 
 
             })}>
-                <Link to='/'><S.LogoImage src="./images/pages/layout/logo.svg" alt="eggbnb"></S.LogoImage></Link>
+                <Link to='/'><S.LogoImage src={`${process.env.PUBLIC_URL}/images/pages/layout/logo.svg`} alt="eggbnb"></S.LogoImage></Link>
                 {/* 이메일 */}
                 <S.Label htmlFor='userId'>
                     {/* <S.InputWrapper> */}

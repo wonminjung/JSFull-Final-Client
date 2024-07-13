@@ -82,6 +82,6 @@ const router = createBrowserRouter([
         path: '*',
         element: <PageNotFound />
     }
-], { basename: "/JSFull-Final-Client" });
+]);
 
 export default router;
