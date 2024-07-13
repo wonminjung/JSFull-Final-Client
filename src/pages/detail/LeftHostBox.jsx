@@ -19,7 +19,7 @@ const LeftHostBox = ({profileImg, userId, commentData, starAvr, setpopup1State})
                 <div className="hostImg">
                     <img src={profileImg
                         ?
-                        `http://localhost:8000/${profileImg}`
+                        `${process.env.REACT_APP_SERVER_URL}/${profileImg}`
                         :`${publicUrl}/images/pages/detail/emptyUser.jpg`
                     } alt="호스트썸네일" />
                 </div>

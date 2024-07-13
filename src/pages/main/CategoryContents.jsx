@@ -36,7 +36,7 @@ const CategoryContents = ({roomList, searchParams}) => {
             return
         }
         const refreshWishList = async () => {
-            await fetch("http://localhost:8000/user/", {
+            await fetch(`${process.env.REACT_APP_SERVER_URL}/user/`, {
                 method : "PATCH",
                 headers : {
                     "Content-Type" : "application/json; charset=utf-8"

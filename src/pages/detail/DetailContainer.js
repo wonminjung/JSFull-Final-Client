@@ -25,7 +25,7 @@ const DetailContainer = () => {
     const [imgModalState, setImgModalState] = useState(false);
     useEffect(()=>{
         const getRoomAndUserList = async () => {
-            const response = await fetch(`http://localhost:8000/room/detail?${searchParams}`);
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/room/detail?${searchParams}`);
             const data = response.json();
             return data;
         };

@@ -27,7 +27,7 @@ function App() {
           return;
         }
         
-        const response = await fetch('http://localhost:8000/user/auth', {
+        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/user/auth`, {
           method : 'POST',
           headers : {
             'Authorization' : `Bearer ${localStorage.getItem('token')}`,

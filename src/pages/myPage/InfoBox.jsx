@@ -139,7 +139,7 @@ const InfoBox = ({info}) => {
     // 수정 fetch
     const updateUserInfo = async () => {
         try{
-            const response = await fetch("http://localhost:8000/user/myPage", {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/user/myPage`, {
                 method : "PATCH",
                 body : JSON.stringify(modify),
                 headers : {
@@ -158,7 +158,7 @@ const InfoBox = ({info}) => {
     // 중복 확인 fetch
     const checkInfo = async (props) => {
         try{
-            const response = await fetch("http://localhost:8000/user/myPage", {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/user/myPage`, {
                 method : "POST",
                 body : JSON.stringify(props),
                 headers : {

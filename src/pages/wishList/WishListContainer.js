@@ -33,7 +33,7 @@ const WishListContainer = () => {
         }
         const getWishList = async () => {
             try{
-                const response = await fetch(`http://localhost:8000/room/wishList`,{
+                const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/room/wishList`,{
                     method : "POST",
                     headers : {
                         'Content-Type' : 'application/json; charset=utf-8'

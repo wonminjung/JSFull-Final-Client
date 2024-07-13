@@ -25,7 +25,7 @@ const ReservationContainer = () => {
     };
     useEffect(()=>{
         const roomData = async () => {
-            const response = await fetch(`http://localhost:8000/booking/reservation?roomId=${roomId}`);
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/booking/reservation?roomId=${roomId}`);
             return response.json();
         };
         

@@ -78,7 +78,7 @@ const SignUpContainer = () => {
     // 이메일 중복 확인 fetch
     const checkEmailInfo = async (props) => {
         try{
-            const response = await fetch("http://localhost:8000/user/checkEmail", {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/user/checkEmail`, {
                 method : "POST",
                 body : JSON.stringify(props),
                 headers : {
@@ -98,7 +98,7 @@ const SignUpContainer = () => {
     // 유저아이디 중복 확인 fetch
     const checkUserIdInfo = async (props) => {
         try{
-            const response = await fetch("http://localhost:8000/user/checkUserId", {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/user/checkUserId`, {
                 method : "POST",
                 body : JSON.stringify(props),
                 headers : {
@@ -120,7 +120,7 @@ const SignUpContainer = () => {
             <S.Form onSubmit={handleSubmit(async (data)=>{
 
                 //회원가입 로직
-                await fetch('http://localhost:8000/user/signUp', {
+                await fetch(`${process.env.REACT_APP_SERVER_URL}/user/signUp`, {
                     method : 'POST',
                     headers : {
                         'Content-Type' : 'application/json'

@@ -58,7 +58,7 @@ const SearchMainContainer = ({ searchParams, setSearchParams, isFilterActivate, 
 
             // 숙소 요청
             const getRoomList = async () => {
-                const response = await fetch(`http://localhost:8000/room/search?${params.toString()}`, 
+                const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/room/search?${params.toString()}`, 
                     {
                         method: "POST",
                         headers: {

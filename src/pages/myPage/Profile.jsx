@@ -31,7 +31,7 @@ const Profile = ({info}) => {
                 </div>
             </>)
         }else{
-            imgRef.current.src = info.profileImg?`http://localhost:8000/${info.profileImg}`:`${publicUrl}/images/pages/detail/emptyUser.jpg`;
+            imgRef.current.src = info.profileImg?`${process.env.REACT_APP_SERVER_URL}/${info.profileImg}`:`${publicUrl}/images/pages/detail/emptyUser.jpg`;
             setContent(<></>);
         }
     }
@@ -44,7 +44,7 @@ const Profile = ({info}) => {
     }
     const uploadFetch = async (formData) => {
         try{
-            const response = await fetch("http://localhost:8000/user/myPage", {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/user/myPage`, {
                 method : "POST",
                 body : formData,
             })
@@ -65,7 +65,7 @@ const Profile = ({info}) => {
                     <label htmlFor="profileImg">
                         <div>
                             <img src={info.profileImg?
-                                `http://localhost:8000/${info.profileImg}`
+                                `${process.env.REACT_APP_SERVER_URL}/${info.profileImg}`
                                 :`${publicUrl}/images/pages/detail/emptyUser.jpg`
                                 } ref={imgRef} alt="프로필 이미지" />
                         </div>
