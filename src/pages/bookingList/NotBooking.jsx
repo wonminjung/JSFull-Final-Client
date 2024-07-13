@@ -10,7 +10,7 @@ const NotBooking = () => {
             <S.NotBookingWrapper>
                 <div className="textBox">
                     <div className="iconBox">
-                       <img src="./images/pages/bookingList/hand.svg"  />
+                       <img src={`${process.env.PUBLIC_URL}/images/pages/bookingList/hand.svg`}  />
                     </div>
                     <div className="text">
                         <h3>
@@ -27,7 +27,7 @@ const NotBooking = () => {
                     </div>
                 </div>
                 <div className="imgBox">
-                    <img src="./images/pages/bookingList/notBooking.webp"/>
+                    <img src={`${process.env.PUBLIC_URL}/images/pages/bookingList/notBooking.webp`}/>
                 </div>
             </S.NotBookingWrapper>
 

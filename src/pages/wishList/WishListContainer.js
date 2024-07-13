@@ -82,7 +82,7 @@ const WishListContainer = () => {
                             <Modal showButtons={false}>
                                 <div className='modalDecorate'>
                                     <div className='modalBody'>
-                                        <img src="./images/pages/wishList/NotWished1.png" alt="숙소사진" />
+                                        <img src={`${process.env.PUBLIC_URL}/images/pages/wishList/NotWished1.png`} alt="숙소사진" />
                                         <h2>마음에 드는 숙소를 한곳에 저장해보세요!</h2>
                                         <h3>검색 중에 발견한 숙소를 위시리스트에 저장하려면<br /> 하트 아이콘을 클릭해보세요.</h3>
                                     </div>

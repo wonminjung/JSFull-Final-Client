@@ -156,7 +156,7 @@ const BookingDetail = ({item, isActive, index,setItemData, itemData, update, set
                     </div>
                 </div>
                 <button className='iconCopy'onClick={()=>onClickCopy(item.roomId.address)}>
-                    <img src="./images/pages/bookingList/copy.svg" alt="copy"/>
+                    <img src={`${process.env.PUBLIC_URL}/images/pages/bookingList/copy.svg`} alt="copy"/>
                     <h5>주소 복사</h5>
                 </button>
                     <KakaoMap props={item.roomId.address} index={index} />
@@ -260,7 +260,7 @@ const BookingDetail = ({item, isActive, index,setItemData, itemData, update, set
                 <div className="cancelBooking">
                         <BasicButton  onClick ={() => handleRemoveItem(item.roomId)} onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)}>
                             <div>
-                                <Link onClick={(e)=> e.preventDefault}><img src = { isHovered2 ? "./images/pages/bookingList/xCircle.svg" : "./images/pages/bookingList/xCircle_y.svg"} alt="home"/>예약 취소하기</Link> 
+                                <Link onClick={(e)=> e.preventDefault}><img src = { isHovered2 ? `${process.env.PUBLIC_URL}/images/pages/bookingList/xCircle.svg` : `${process.env.PUBLIC_URL}/images/pages/bookingList/xCircle_y.svg`} alt="home"/>예약 취소하기</Link> 
                             </div>
                         </BasicButton> 
                 </div>
@@ -268,7 +268,7 @@ const BookingDetail = ({item, isActive, index,setItemData, itemData, update, set
                 <div className="navToDetailPage">
                         <BasicButton  onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                             <div>
-                                <Link to={`/detail?roomId=${item.roomId._id}`}><img src = { isHovered ? "./images/pages/bookingList/home.svg" : "./images/pages/bookingList/home_y.svg"} alt="home"/>숙소 페이지로 이동</Link> 
+                                <Link to={`/detail?roomId=${item.roomId._id}`}><img src = { isHovered ? `${process.env.PUBLIC_URL}/images/pages/bookingList/home.svg` : `${process.env.PUBLIC_URL}/images/pages/bookingList/home_y.svg`} alt="home"/>숙소 페이지로 이동</Link> 
                             </div>
                         </BasicButton> 
                 </div>

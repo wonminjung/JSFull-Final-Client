@@ -37,7 +37,7 @@ const DetailGradeBox = ({comment}) => {
                         <div>
                             <p>{title[i]}</p>
                             <h3>{maxLength === 0? 0:(grade / maxLength).toFixed(1)}</h3>
-                            <img src={`./images/pages/detail/gradeImg/img${i+1}.svg`} alt={`${title[i]}`} />
+                            <img src={`${process.env.PUBLIC_URL}/images/pages/detail/gradeImg/img${i+1}.svg`} alt={`${title[i]}`} />
                         </div>
                     </li>
                 )}

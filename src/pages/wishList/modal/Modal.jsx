@@ -15,10 +15,10 @@ const Modal = ({message, onConfirm, onCancel, children, BasicButton, showButtons
                 {showButtons && 
                     <div className='modal-buttons'>
                         <button className='okButton' onClick={onConfirm}>
-                            <img src="./images/pages/wishList/checkButton.svg" alt="확인버튼" />
+                            <img src={`${process.env.PUBLIC_URL}/images/pages/wishList/checkButton.svg`} alt="확인버튼" />
                         </button>
                         <button className='okButton' onClick={onCancel}>
-                            <img src="./images/pages/wishList/cancelButton.svg" alt="취소버튼" />
+                            <img src={`${process.env.PUBLIC_URL}/images/pages/wishList/cancelButton.svg`} alt="취소버튼" />
                         </button>
                     </div>
                 }

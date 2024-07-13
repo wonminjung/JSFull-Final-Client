@@ -8,7 +8,7 @@ const PageNotFound = () => {
         <S.PNFrootContainer>
             <Link to="/">
                 <S.PNFLogo>
-                    <img src="./images/pages/layout/logo.svg" alt="eggbnb"/>
+                    <img src={`${process.env.PUBLIC_URL}/images/pages/layout/logo.svg`} alt="eggbnb"/>
                 </S.PNFLogo>
             </Link>
 
