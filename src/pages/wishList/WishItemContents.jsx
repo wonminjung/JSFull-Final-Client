@@ -28,6 +28,7 @@ const WishItemContents = ({rooms, userId, setUpdate, update}) => {
         handleConfirmRemove();
     }
     
+    
     // 서버에 요청하여 위시리스트에서 항목을 삭제
     const handleConfirmRemove = async( ) => {
                 try{
