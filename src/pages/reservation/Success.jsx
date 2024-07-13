@@ -42,7 +42,7 @@ const Success = () => {
                 },
             });
         };
-        bookingData().then(console.log).catch(console.error)
+        bookingData().then().catch(console.error)
         const requestData = {
             orderId: searchParams.get("orderId"),
             amount: searchParams.get("amount"),
@@ -77,7 +77,6 @@ const Success = () => {
             }
 
         // TODO: 결제 성공 비즈니스 로직을 구현하세요.
-        // console.log(json);
             return json;
         }
         confirm().then((data) => {

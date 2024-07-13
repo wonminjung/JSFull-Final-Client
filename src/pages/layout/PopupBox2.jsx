@@ -22,7 +22,6 @@ const PopupBox2 = ({modal2IsOpen,setStartDateState,setEndDateState}) => {
         const startday = item.selection.startDate;
         const endday = item.selection.endDate;
         const diff = Math.ceil(Math.abs(endday - startday) / (1000 * 60 * 60 * 24));
-        console.log(diff);
         setState([item.selection]);
         setStartDateState(
             // moment(startday,"YYYY.MM.DD")

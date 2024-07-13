@@ -45,7 +45,6 @@ const InfoBox = ({setAddress, info}) => {
     const modifyAddress = () => {
         setModify([{_id : _id}, {}])
         setModalState(true)
-        console.log("address")
         setTitle("주소")
         setContent(<div className='postInputBox'>
             <div><input type="text" ref={post1Ref} className='disabledPostInput' disabled={true} placeholder='우편번호'/><button type='button' onClick={openPostModal}>주소 검색</button></div>

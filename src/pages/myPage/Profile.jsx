@@ -52,7 +52,6 @@ const Profile = ({info}) => {
             const message = userInfo.message;
             const info = userInfo.user;
             alert(message)
-            console.log(info)
             dispatch(setUser(info))
             setContent(<></>)
         }catch(error){

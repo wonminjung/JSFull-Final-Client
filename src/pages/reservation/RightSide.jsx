@@ -3,7 +3,6 @@ import S from './style'
 
 const RightSide = ({datas, days}) => {
     // fetch()
-    console.log(typeof datas.dayPrice, typeof days, typeof datas.cleanVat);
     const dayPrice = datas.dayPrice;
     const sum = dayPrice * days + datas.cleanVat;
 

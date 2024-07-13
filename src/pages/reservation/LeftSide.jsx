@@ -11,8 +11,6 @@ const LeftSide = ({datas, days}) => {
 
     const currentUser = useSelector(state => state.user.currentUser);
     const isLogin = useSelector(state => state.user.isLogin);
-    console.log(currentUser);
-    console.log(isLogin);
     // const {_id,  phone, name, email } = currentUser;
 
     return (

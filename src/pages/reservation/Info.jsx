@@ -6,7 +6,6 @@ const Info = ({datas}) => {
     const stayingPeriod = `${newSdate.getMonth() + 1}월 ${newSdate.getDate()}일 ~ ${newEdate.getMonth() + 1}월 ${newEdate.getDate()}일`
     const guest = guests;
     const infant = infants;
-    console.log(typeof guest, typeof infant);
     return (
         <S.CategoryBox>
             <h3>

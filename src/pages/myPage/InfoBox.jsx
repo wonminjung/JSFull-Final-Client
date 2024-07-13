@@ -138,7 +138,6 @@ const InfoBox = ({info}) => {
 
     // 수정 fetch
     const updateUserInfo = async () => {
-        console.log(modify)
         try{
             const response = await fetch("http://localhost:8000/user/myPage", {
                 method : "PATCH",
@@ -151,7 +150,6 @@ const InfoBox = ({info}) => {
             const message = userInfo.message;
             const info = userInfo.user;
             alert(message)
-            console.log(info)
             dispatch(setUser(info))
         }catch(error){
             console.log(error);
@@ -159,7 +157,6 @@ const InfoBox = ({info}) => {
     }
     // 중복 확인 fetch
     const checkInfo = async (props) => {
-        console.log(props)
         try{
             const response = await fetch("http://localhost:8000/user/myPage", {
                 method : "POST",
@@ -169,7 +166,6 @@ const InfoBox = ({info}) => {
                 },
             })
             const message = await response.json();
-            console.log(message)
             return message
         }catch(error){
             console.log(error)
@@ -180,7 +176,6 @@ const InfoBox = ({info}) => {
     const modifyName = () => {
         setModify([{_id : _id}, {}])
         setModalState(true)
-        console.log("name")
         setTitle("이름")
         setContent(<>
             <input type="text" ref={inputRef} placeholder='새로운 이름을 입력해주세요.'/>
@@ -190,7 +185,6 @@ const InfoBox = ({info}) => {
     const modifyPw = () => {
         setModify([{_id : _id}, {}])
         setModalState(true)
-        console.log("password")
         setTitle("비밀번호")
         setCheckPwState(false)
         setCheckPwState2(false)
@@ -217,7 +211,6 @@ const InfoBox = ({info}) => {
         setEmailValidate(false);
         // 모달창 오픈
         setModalState(true)
-        console.log("email")
         setTitle("이메일")
         setContent(<div className='emailInputBox'>
             <div>
@@ -233,7 +226,6 @@ const InfoBox = ({info}) => {
     const modifyPhone = () => {
         setModify([{_id : _id}, {}])
         setModalState(true)
-        console.log("phone")
         setTitle("연락처")
         setContent(<>
             <input type="text" ref={inputRef} placeholder='새로운 연락처를 입력해주세요.'/>
@@ -243,7 +235,6 @@ const InfoBox = ({info}) => {
     const modifyAddress = () => {
         setModify([{_id : _id}, {}])
         setModalState(true)
-        console.log("address")
         setTitle("주소")
         setContent(<div className='postInputBox'>
             <div><input type="text" ref={post1Ref} className='disabledPostInput' disabled={true} placeholder='우편번호'/><button type='button' onClick={openPostModal}>주소 검색</button></div>
@@ -278,9 +269,6 @@ const InfoBox = ({info}) => {
             setModalState(false)
         }else if(title === "비밀번호"){
             // 비밀번호 수정
-            console.log(checkPwState)
-            console.log(checkPwState2)
-            console.log(checkPwState3)
             if(!checkPwState){
                 alert("본인확인을 완료해주세요!")
                 return

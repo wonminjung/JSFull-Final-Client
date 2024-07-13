@@ -77,7 +77,6 @@ const SignUpContainer = () => {
 
     // 이메일 중복 확인 fetch
     const checkEmailInfo = async (props) => {
-        console.log(props)
         try{
             const response = await fetch("http://localhost:8000/user/checkEmail", {
                 method : "POST",
@@ -88,7 +87,6 @@ const SignUpContainer = () => {
             })
             // 주석된 코드
             const message = await response.json();
-            console.log(message)
             return message
         }catch(error){
             console.log(error)
@@ -99,7 +97,6 @@ const SignUpContainer = () => {
     
     // 유저아이디 중복 확인 fetch
     const checkUserIdInfo = async (props) => {
-        console.log(props)
         try{
             const response = await fetch("http://localhost:8000/user/checkUserId", {
                 method : "POST",
@@ -121,7 +118,6 @@ const SignUpContainer = () => {
     return (
         <S.SignUpWrapper>
             <S.Form onSubmit={handleSubmit(async (data)=>{
-                console.log(data)
 
                 //회원가입 로직
                 await fetch('http://localhost:8000/user/signUp', {
@@ -240,7 +236,6 @@ const SignUpContainer = () => {
                             validate : {
                                 matchPassword : (value) => {
                                     const {password} = getValues();
-                                    console.log(value, password, value === password)
                                     return value === password;
                                 }
                             }
