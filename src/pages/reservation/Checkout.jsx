@@ -91,8 +91,8 @@ const Checkout = () => {
                                     customerName: userName,
                                     customerEmail: userEmail,
                                     customerMobilePhone: userPhone.replaceAll("-",""),
-                                    successUrl: `${window.location.origin}/reservation/checkout/success?${params}&title=${title}`,
-                                    failUrl: `${window.location.origin}/fail`,
+                                    successUrl: `${window.location.origin}/JSFull-Final-Client/reservation/checkout/success?${params}&title=${title}`,
+                                    failUrl: `${window.location.origin}/JSFull-Final-Client/fail`,
                                 });
                             } catch (error) {
                             // 에러 처리하기
