@@ -398,75 +398,29 @@ S.LeftBox = styled.div`
             height: 15px;
             vertical-align: bottom;
         }
-        &.user::before{
-            content: url("./images/pages/detail/user.svg");
-        }
-        &.room::before{
-            content: url("./images/pages/detail/house.svg");
-        }
-        &.bed::before{
-            content: url("./images/pages/detail/bed-single.svg");
-        }
-        &.bath::before{
-            content: url("./images/pages/detail/bath.svg");
-        }
-        &.picture::before{
-            content: url("./images/pages/detail/image.svg");
-        }
-        &.wifi::before{
-            content: url("./images/pages/detail/wifi-full.svg");
-        }
-        &.tv::before{
-            content: url("./images/pages/detail/tv.svg");
-        }
-        &.car::before{
-            content: url("./images/pages/detail/car.svg");
-        }
-        &.pool::before{
-            content: url("./images/pages/detail/pool.svg");
-        }
-        &.time::before{
-            content: url("./images/pages/detail/clock.svg");
-        }
-        &.check::before{
-            content: url("./images/pages/detail/credit-card.svg");
-        }
-        &.users::before{
-            content: url("./images/pages/detail/users.svg");
-        }
-        &.pet::before{
-            content: url("./images/pages/detail/paw.svg");
-        }
-        &.moon::before{
-            content: url("./images/pages/detail/moon.svg");
-        }
-        &.photo::before{
-            content: url("./images/pages/detail/camera.svg");
-        }
-        &.memo::before{
-            content: url("./images/pages/detail/text-document.svg");
-        }
-        &.trash::before{
-            content: url("./images/pages/detail/bin.svg");
-        }
-        &.lock::before{
-            content: url("./images/pages/detail/bag.svg");
-        }
-        &.off::before{
-            content: url("./images/pages/detail/power.svg");
-        }
-        &.note::before{
-            content: url("./images/pages/detail/note.svg");
-        }
-        &.caution::before{
-            content: url("./images/pages/detail/Combined Shape.svg");
-        }
-        &.eye::before{
-            content: url("./images/pages/detail/eye.svg");
-        }
-        &.bell::before{
-            content: url("./images/pages/detail/bell.svg");
-        }
+        &.user::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/user.svg); }
+        &.room::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/house.svg); }
+        &.bed::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/bed-single.svg); }
+        &.bath::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/bath.svg); }
+        &.picture::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/image.svg); }
+        &.wifi::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/wifi-full.svg); }
+        &.tv::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/tv.svg); }
+        &.car::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/car.svg); }
+        &.pool::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/pool.svg); }
+        &.time::before{  content: url(${process.env.PUBLIC_URL}/images/pages/detail/clock.svg); }
+        &.check::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/credit-card.svg); }
+        &.users::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/users.svg); }
+        &.pet::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/paw.svg); }
+        &.moon::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/moon.svg); }
+        &.photo::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/camera.svg); }
+        &.memo::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/text-document.svg); }
+        &.trash::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/bin.svg); }
+        &.lock::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/bag.svg); }
+        &.off::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/power.svg); }
+        &.note::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/note.svg); }
+        &.caution::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/"Combined Shape.svg"); }
+        &.eye::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/eye.svg); }
+        &.bell::before{ content: url(${process.env.PUBLIC_URL}/images/pages/detail/bell.svg); }
     }
     & .hostBox{
         width: 100%;
@@ -716,7 +670,7 @@ S.RightBox = styled.div`
                         width: 100%;
                         position: relative;
                         &::after{
-                            content: url('./images/pages/detail/arrow.png');
+                            content: url(${process.env.PUBLIC_URL}/images/pages/detail/arrow.png);
                             width: 14px;
                             height: 12px;
                             display: inline-block;
