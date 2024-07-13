@@ -150,7 +150,7 @@ const SignUpContainer = () => {
 
             })}>
 
-                <S.LogoImage src="./images/pages/layout/logo.svg" alt="eggbnb"></S.LogoImage>
+                <S.LogoImage src={`${process.env.PUBLIC_URL}/images/pages/layout/logo.svg`} alt="eggbnb"></S.LogoImage>
                 
                 {/* 유저아이디 */}
                 <S.Label htmlFor='userId'>

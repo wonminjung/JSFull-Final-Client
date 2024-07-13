@@ -75,7 +75,7 @@ function App() {
     <>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider theme={theme}>
-          <RouterProvider router={router} />
+          <RouterProvider router={router} basename={"/JSFull-Final-Client"} />
           <GlobalStyle />
         </ThemeProvider>
       </QueryClientProvider>

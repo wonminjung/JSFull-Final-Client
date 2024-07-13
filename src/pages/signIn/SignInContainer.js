@@ -28,7 +28,7 @@ const SignInContainer = () => {
         return (
             <S.SignInWrapper>
                 <S.Title>{currentUser.name}님 환영합니다!</S.Title>
-                <S.WelcomImage src="./images/pages/signIn/welcome.gif" alt="welcome"></S.WelcomImage>
+                <S.WelcomImage src={`${process.env.PUBLIC_URL}/images/pages/signIn/welcome.gif`} alt="welcome"></S.WelcomImage>
                 {/* <Link to='/'><S.LogoImageLittle src="./images/pages/layout/logo.svg" alt="eggbnb"></S.LogoImageLittle></Link> */}
             
                 <Link to='/'><S.Button>홈으로</S.Button></Link>
