@@ -82,6 +82,6 @@ const router = createBrowserRouter([
         path: '*',
         element: <PageNotFound />
     }
-]);
+], { basename: process.env.PUBLIC_URL });
 
 export default router;
